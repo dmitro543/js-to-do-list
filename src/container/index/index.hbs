@@ -3,31 +3,32 @@
 в якому міститься код, котрий буде віддаватися по шляху (PATH) - "/"
 }}
 
-<main>
-	<div class="page task task_List">
-        <div class="page-title">To-do list</div>
-        <div class="block">
-            <input type="text" class="block-input form_input" placeholder="Введіть задачу...">
-            <button class="block-button form_button">Додати</button>
-        </div>
-        <template class="task">
-          <div class="list task-done">
-            <div class="list-id">
-                <p class="list-number">1.</p>
-                <p class="list-description">Some placeholder content in a paragraph below the heading and date.</p>
-            </div>
-            <div class="buttons">
-                <button class="list-add task-button--do">
-                    <img src="/svg/list-add.svg" class="list-add-img">
-                </button>
-                <button class="list-delete task-button--done">
-                    <img src="/svg/list-delete.svg" class="list-add">
-                </button>
-            </div>
-          </div>
-        </template>
+<div class="page">
+    <h1 class="title page-title">
+        To-do list
+    </h1>
+
+    <div class="block form">
+        <input type="text" class="block-input form__input" placeholder="Введіть задачу...">
+        <button class="block-button form__button">Додати</button>
     </div>
-</main>
+
+    <main class="task__list"></main>
+</div>
+
+<template id="task">
+    <div class="task list">
+        <span class="task__number list-id">1.</span>
+        <span class="task__text list-description">Some placeholder content in a paragraph below the heading and date.</span>
+        <button class="list-add task__button task__button--do">
+               <img src="/svg/list-add.svg" class="list-add-img">
+        </button>
+        <button class="list-delete task__button task__button--cancel">
+            <img src="/svg/list-delete.svg" class="list-add">
+        </button>
+    </div>
+</template>
+
 
 {{!
     Цей код містить лише те, що буде виводитись в <body>
