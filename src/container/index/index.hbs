@@ -4,7 +4,29 @@
 }}
 
 <main>
-	{{>heading title="Index" info=data.test}}
+	<div class="page task">
+        <div class="page-title">To-do list</div>
+        <div class="block">
+            <input type="text" class="block-input form_input" placeholder="Введіть задачу...">
+            <button class="block-button form_button">Додати</button>
+        </div>
+        <template class="task">
+          <div class="list task-done">
+            <div class="list-id">
+                <p class="list-number">1.</p>
+                <p class="list-description">Some placeholder content in a paragraph below the heading and date.</p>
+            </div>
+            <div class="buttons">
+                <button class="list-add">
+                    <img src="/svg/list-add.svg" class="list-add-img">
+                </button>
+                <button class="list-delete">
+                    <img src="/svg/list-delete.svg" class="list-add">
+                </button>
+            </div>
+          </div>
+        </template>
+    </div>
 </main>
 
 {{!
