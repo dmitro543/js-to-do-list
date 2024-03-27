@@ -1,4 +1,4 @@
- class Todo {
+export class Todo {
     static #NAME = 'todo'
 
     static #saveData = () => {
@@ -38,7 +38,7 @@
     static #button = null
 
     static init = () => {
-        this.#template = document.getElementById('task',).content.firstElementChild()
+        this.#template = document.getElementById('task',).content.firstElementChild
 
         this.document.querySelector('.task_List')
         this.document.querySelector('.form_input')
@@ -86,8 +86,8 @@
 
         if(data.done) {
             el.classlist.add('task-done')
-            btn.classlist.remove('task-button_do')
-            btn.classlist.add('task-button_done')
+            btn.classlist.remove('task-button--do')
+            btn.classlist.add('task-button--done')
         }
         
         return el
@@ -97,9 +97,9 @@
         const result = this.#toggleDone(data.id)
         
         if (result === true || result === false) {
-            el.classlist.add('task-done')
-            btn.classlist.remove('task-button_do')
-            btn.classlist.add('task-button_done')
+            el.classlist.toggle('task-done')
+            btn.classlist.toggle('task-button--do')
+            btn.classlist.toggle('task-button--done')
 
             this.#saveData()
         }
